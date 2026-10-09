@@ -1,0 +1,8 @@
+/* Keep each app stage inside one viewport; prevents screen overlap and document scrolling. */
+html,body{height:100%;overflow:hidden}
+.auth-screen,.onboarding-screen{position:fixed;inset:0;z-index:20;overflow:hidden}
+.app-shell{height:100vh;min-height:0;overflow:hidden}
+.main-content{height:100vh;min-height:0;overflow:hidden}
+@media (min-width:1051px) and (max-height:900px){.main-content{padding-top:20px;padding-bottom:15px;transform-origin:top left;scale:.91;width:calc((100% - 252px)/.91)}.topbar{margin-bottom:21px}.stats-grid{margin-bottom:14px}.stat-card{height:109px}.schedule-row{min-height:59px}.insights-grid{margin-top:14px}.consistency-card,.stock-card{padding-top:15px;padding-bottom:15px}.schedule-card{padding-top:15px}.card-heading{margin-bottom:10px}}
+@media (max-width:1050px){.main-content{overflow:hidden}.stats-grid{grid-template-columns:repeat(3,1fr)}.dashboard-grid,.insights-grid{grid-template-columns:1fr 1fr}.patients-card{display:block}.patient-card{padding:7px}.insights-grid{margin-top:14px}.schedule-row{min-height:59px}}
+@media (max-width:700px){.auth-screen,.onboarding-screen{overflow:hidden}.auth-aside{min-height:230px}.auth-content{overflow:hidden}.main-content{overflow:hidden}.stats-grid{grid-template-columns:1fr}.dashboard-grid,.insights-grid{grid-template-columns:1fr}.patients-card,.insights-grid{display:none}.schedule-card{max-height:440px;overflow:hidden}}

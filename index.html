@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediGabay — Caregiver Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="onboarding.css" />
+    <link rel="stylesheet" href="layout-fix.css" />
+    <link rel="stylesheet" href="empty-dashboard.css" />
+    <link rel="stylesheet" href="profile-forms.css" />
+    <link rel="stylesheet" href="medication.css" />
+  </head>
+  <body>
+    <section class="auth-screen" id="authScreen">
+      <div class="auth-aside"><a class="brand auth-brand" href="#"><span class="brand-mark">✦</span><span>Medi<span>Gabay</span></span></a><div class="auth-message"><span class="care-badge">Caregiver-first medication support</span><h1>Alaga na may<br><i>gabay.</i></h1><p>Keep your loved ones' medications, schedules, and refill needs in one caring place.</p></div><div class="auth-quote"><span>“</span><p>Mas panatag ako dahil alam ko kung nainom na ni Mama ang gamot niya.</p><b>— Elena, daughter & caregiver</b></div><div class="auth-dots"><i></i><i class="active"></i><i></i></div></div>
+      <div class="auth-content"><div class="auth-form-wrap"><div class="auth-language">🌐 <button type="button" class="selected">English</button><button type="button">Tagalog</button><button type="button">Taglish</button></div><form class="auth-form" id="loginForm"><p class="eyebrow">WELCOME BACK</p><h2>Welcome back!</h2><p class="form-subtitle">Log in to continue caring with confidence.</p><label>Email address<input type="email" placeholder="you@email.com" required /></label><label>Password<a href="#">Forgot password?</a><div class="password-field"><input type="password" placeholder="Enter your password" required /><button type="button" aria-label="Show password">◉</button></div></label><button class="auth-submit" type="submit">Log in <span>→</span></button><p class="form-switch">New to MediGabay? <button type="button" data-show="registerForm">Create an account</button></p></form><form class="auth-form hidden" id="registerForm"><button class="back-auth" type="button" data-show="loginForm">← Back to login</button><p class="eyebrow">START CARING WITH CONFIDENCE</p><h2>Create your account</h2><p class="form-subtitle">Set up your caregiver space in just a minute.</p><label>Full name<input type="text" placeholder="e.g. Angela Manalo" required /></label><label>Email address<input type="email" placeholder="you@email.com" required /></label><label>Password<div class="password-field"><input type="password" placeholder="Create a password" required /><button type="button" aria-label="Show password">◉</button></div></label><button class="auth-submit" type="submit">Create account <span>→</span></button><p class="form-switch">Already have an account? <button type="button" data-show="loginForm">Log in</button></p></form></div></div>
+    </section>
+    <section class="onboarding-screen hidden" id="onboardingScreen"><div class="onboarding-top"><a class="brand" href="#"><span class="brand-mark">✦</span><span>Medi<span>Gabay</span></span></a><button class="onboarding-exit" id="startDemo">Skip for now</button></div><div class="onboarding-progress"><i class="active"></i><i></i><i></i></div><div class="onboarding-card" id="welcomeStep"><div class="onboarding-art"><div class="heart">♥</div><div class="pill pill-one"></div><div class="pill pill-two"></div><div class="care-circle">✦</div></div><p class="eyebrow">WELCOME TO MEDIGABAY</p><h1>You're in the right place.</h1><p class="onboarding-copy">MediGabay helps you stay on top of the people you care for — one dose, one day at a time.</p><div class="welcome-points"><span><b>✓</b> Track daily medicine schedules</span><span><b>✓</b> Know when refills are needed</span><span><b>✓</b> See helpful care insights</span></div><button class="auth-submit step-next" data-next="rulesStep">Let's get started <span>→</span></button></div><div class="onboarding-card hidden" id="rulesStep"><div class="rules-icon">♡</div><p class="eyebrow">A QUICK REMINDER</p><h1>Care with clarity.</h1><p class="onboarding-copy">MediGabay is here to help you organize and monitor medicine routines. It does not replace advice from a doctor or pharmacist.</p><div class="rules-box"><strong>Please remember:</strong><span>• Always follow the prescription and care instructions.</span><span>• Contact a healthcare professional for medical concerns.</span><span>• Keep patient information private and secure.</span></div><label class="understand-check"><input type="checkbox" id="rulesCheck" /> <span>I understand and agree to use MediGabay responsibly.</span></label><button class="auth-submit step-next disabled" id="rulesNext" data-next="languageStep" disabled>Continue <span>→</span></button></div><div class="onboarding-card hidden" id="languageStep"><div class="language-icon">Aあ</div><p class="eyebrow">MAKE IT FEEL LIKE HOME</p><h1>Choose your language.</h1><p class="onboarding-copy">You can always change this later in your account settings.</p><div class="language-options"><button class="language-option selected" data-language="English"><b>EN</b><span><strong>English</strong><small>Clear and familiar</small></span><i>✓</i></button><button class="language-option" data-language="Tagalog"><b>PH</b><span><strong>Tagalog</strong><small>Mas madaling maintindihan</small></span><i>✓</i></button><button class="language-option" data-language="Taglish"><b>TL</b><span><strong>Taglish</strong><small>Best of both worlds</small></span><i>✓</i></button></div><button class="auth-submit step-next" id="finishOnboarding">Go to my dashboard <span>→</span></button></div></section>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#"><span class="brand-mark">✦</span><span>Medi<span>Gabay</span></span></a>
+        <p class="brand-caption">Kasama mo sa pag-aalaga.</p>
+        <nav class="nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#dashboard"><span>▦</span> Overview</a>
+          <a class="nav-link" href="#schedule"><span>◷</span> Today's Schedule</a>
+          <a class="nav-link" href="#patients"><span>♙</span> My Patients</a>
+          <a class="nav-link" href="#medicines"><span>⊞</span> Medicines</a>
+          <a class="nav-link" href="#history"><span>◫</span> Dose History</a>
+          <a class="nav-link" href="#reports"><span>⌁</span> Reports</a>
+        </nav>
+        <div class="sidebar-footer">
+          <button class="help-link" type="button"><span>?</span> Kailangan ng tulong?</button>
+          <div class="profile-mini">
+            <div class="avatar caregiver">AM</div>
+            <div><strong>Angela Manalo</strong><small>Caregiver</small></div>
+            <button class="more" aria-label="Account options">⋮</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content" id="dashboard">
+        <header class="topbar">
+          <button class="mobile-menu" aria-label="Open menu">☰</button>
+          <div class="greeting"><p>Friday, September 11</p><h1>Magandang umaga, Angela <span>👋</span></h1></div>
+          <div class="header-actions">
+            <button class="icon-button" aria-label="Notifications">♧<i></i></button>
+            <button class="add-patient" type="button"><b>＋</b> Add patient</button>
+          </div>
+        </header>
+
+        <section class="overview-heading">
+          <div><h2>Today at a glance</h2><p>Here's how your loved ones are doing today.</p></div>
+          <div class="date-pill">▣ &nbsp; September 11, 2026</div>
+        </section>
+
+        <section class="stats-grid" aria-label="Daily summary">
+          <article class="stat-card teal"><div class="stat-icon">✓</div><div><span>Doses completed</span><strong><b id="completedCount">5</b> <em>/ 8</em></strong><small>3 doses remaining</small></div><div class="mini-ring"><span>63%</span></div></article>
+          <article class="stat-card amber"><div class="stat-icon">◷</div><div><span>Need attention</span><strong id="attentionCount">1</strong><small>Missed dose today</small></div><a href="#schedule">View <b>→</b></a></article>
+          <article class="stat-card coral"><div class="stat-icon">▣</div><div><span>Low medicine stock</span><strong>2</strong><small>Needs refill soon</small></div><a href="#stock">View <b>→</b></a></article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="card schedule-card" id="schedule">
+            <div class="card-heading"><div><h3>Today's medication schedule</h3><p>Friday, September 11</p></div><button class="text-button" type="button">View all <span>→</span></button></div>
+            <div class="timeline" id="timeline">
+              <div class="schedule-row done"><time>7:00<br><span>AM</span></time><div class="timeline-dot">✓</div><div class="patient-avatar lola">LM</div><div class="medication"><strong>Losartan <small>50 mg · 1 tablet</small></strong><span>For Lola Maria <b>•</b> Taken at 7:04 AM</span></div><span class="status ontime">On time</span><button class="row-menu">•••</button></div>
+              <div class="schedule-row done"><time>8:00<br><span>AM</span></time><div class="timeline-dot">✓</div><div class="patient-avatar tatay">JR</div><div class="medication"><strong>Metformin <small>500 mg · 1 tablet</small></strong><span>For Tatay Jose <b>•</b> Taken at 8:12 AM</span></div><span class="status ontime">On time</span><button class="row-menu">•••</button></div>
+              <div class="schedule-row overdue"><time>12:00<br><span>PM</span></time><div class="timeline-dot">!</div><div class="patient-avatar lola">LM</div><div class="medication"><strong>Amlodipine <small>5 mg · 1 tablet</small></strong><span>For Lola Maria <b>•</b> Due 16 min ago</span></div><button class="log-dose" data-med="Amlodipine" data-patient="Lola Maria">Log dose</button><button class="row-menu">•••</button></div>
+              <div class="schedule-row upcoming"><time>6:00<br><span>PM</span></time><div class="timeline-dot">·</div><div class="patient-avatar tatay">JR</div><div class="medication"><strong>Atorvastatin <small>20 mg · 1 tablet</small></strong><span>For Tatay Jose <b>•</b> In 5 hours</span></div><span class="status upcoming-status">Upcoming</span><button class="row-menu">•••</button></div>
+            </div>
+          </article>
+
+          <aside class="card patients-card" id="patients">
+            <div class="card-heading"><div><h3>My patients</h3><p>2 people in your care</p></div><button class="plain-plus" type="button">＋</button></div>
+            <button class="patient-card selected" data-patient="Lola Maria"><div class="patient-photo lola-photo">LM</div><div><strong>Lola Maria</strong><span>78 years old</span></div><b>›</b></button>
+            <button class="patient-card" data-patient="Tatay Jose"><div class="patient-photo tatay-photo">JR</div><div><strong>Tatay Jose</strong><span>66 years old</span></div><b>›</b></button>
+            <button class="manage-patients" type="button">Manage patients <span>→</span></button>
+          </aside>
+        </section>
+
+        <section class="insights-grid">
+          <article class="card consistency-card">
+            <div class="card-heading"><div class="title-with-icon"><span class="heading-icon teal-icon">⌁</span><div><h3>Intake consistency</h3><p>How regular are the doses?</p></div></div><button class="period-button">Last 7 days⌄</button></div>
+            <div class="consistency-content"><div class="score-circle"><strong>92</strong><span>Excellent</span></div><div class="chart-wrap"><div class="chart-labels"><span>Perfect</span><span>Target range</span></div><div class="bar-chart"><i style="height: 52%"></i><i style="height: 67%"></i><i style="height: 48%"></i><i style="height: 80%"></i><i style="height: 63%"></i><i style="height: 72%"></i><i class="today" style="height: 92%"></i></div><div class="chart-days"><span>Sat</span><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div></div></div>
+            <div class="insight-note"><span>✦</span><p><b>Great job!</b> Doses were taken within the recommended time window this week.</p></div>
+          </article>
+
+          <article class="card stock-card" id="stock">
+            <div class="card-heading"><div class="title-with-icon"><span class="heading-icon coral-icon">▣</span><div><h3>Refill forecast</h3><p>Based on actual consumption</p></div></div><button class="text-button">View details <span>→</span></button></div>
+            <div class="stock-list">
+              <div class="stock-item"><div class="med-icon pink">⌁</div><div class="stock-info"><strong>Losartan 50 mg</strong><span>Lola Maria · 1 tablet/day</span><div class="stock-meter"><i style="width: 21%"></i></div></div><div class="stock-days urgent"><strong>6</strong><span>days left</span></div></div>
+              <div class="stock-item"><div class="med-icon yellow">◇</div><div class="stock-info"><strong>Metformin 500 mg</strong><span>Tatay Jose · 2 tablets/day</span><div class="stock-meter"><i style="width: 38%"></i></div></div><div class="stock-days warning"><strong>11</strong><span>days left</span></div></div>
+              <div class="stock-item"><div class="med-icon mint">+</div><div class="stock-info"><strong>Amlodipine 5 mg</strong><span>Lola Maria · 1 tablet/day</span><div class="stock-meter good"><i style="width: 76%"></i></div></div><div class="stock-days safe"><strong>23</strong><span>days left</span></div></div>
+            </div>
+            <div class="forecast-alert"><span>⚠</span><p><b>Heads up!</b> Losartan may run out by September 17.</p><button>Refill now</button></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="doseModal" aria-hidden="true">
+      <form class="dose-modal" id="doseForm"><button class="close-modal" type="button">×</button><span class="modal-icon">✓</span><h2>Log medication dose</h2><p id="modalDescription">Amlodipine for Lola Maria</p><label>When was it taken?<div class="choice-group"><button type="button" class="choice active" data-status="On time">On time</button><button type="button" class="choice" data-status="Late">Late</button><button type="button" class="choice" data-status="Missed">Missed</button></div></label><label>Notes <small>(optional)</small><textarea placeholder="Add a quick note..."></textarea></label><button class="submit-dose" type="submit">Save dose log</button></form>
+    </div>
+    <div class="modal-backdrop profile-backdrop" id="profileModal" aria-hidden="true">
+      <form class="profile-modal" id="caregiverForm"><button class="close-profile" type="button">×</button><p class="eyebrow">YOUR ACCOUNT</p><h2>Your caregiver profile</h2><p>Tell us a little about yourself so your care workspace feels personal.</p><div class="form-grid"><label>Full name<input name="name" placeholder="e.g. Angela Manalo" required></label><label>Mobile number<input name="phone" placeholder="e.g. 0917 123 4567"></label></div><label>Email address<input name="email" type="email" placeholder="you@email.com"></label><label>Relationship to patient<select name="relationship" required><option value="">Select relationship</option><option>Child / Anak</option><option>Spouse / Asawa</option><option>Grandchild / Apo</option><option>Companion / Caregiver</option><option>Other family member</option></select></label><button class="auth-submit" type="submit">Save my profile <span>→</span></button></form>
+      <form class="profile-modal hidden" id="patientForm"><button class="close-profile" type="button">×</button><p class="eyebrow">PATIENT PROFILE</p><h2 id="patientFormTitle">Add a patient</h2><p>Add the information you need to organize their care.</p><input type="hidden" name="index"><div class="form-grid"><label>Full name<input name="name" placeholder="e.g. Maria Santos" required></label><label>Nickname<input name="nickname" placeholder="e.g. Lola Maria"></label></div><div class="form-grid"><label>Birth year<input name="birthYear" type="number" min="1900" max="2026" placeholder="e.g. 1948"></label><label>Gender<select name="gender"><option value="">Prefer not to say</option><option>Female</option><option>Male</option><option>Other</option></select></label></div><label>Relationship to you<select name="relationship" required><option value="">Select relationship</option><option>Parent</option><option>Spouse</option><option>Grandparent</option><option>Sibling</option><option>Relative</option><option>Client / Companion</option><option>Other</option></select></label><label>Care notes <small>(optional)</small><textarea name="notes" placeholder="Allergies, reminders, or important care details..."></textarea></label><button class="auth-submit" type="submit">Save patient profile <span>→</span></button></form>
+    </div>
+    <div class="modal-backdrop profile-backdrop" id="medicationModal" aria-hidden="true">
+      <form class="profile-modal" id="medicationForm"><button class="close-medication" type="button">×</button><p class="eyebrow">MEDICATION SETUP</p><h2 id="medicationTitle">Medication information</h2><p>Add the medicine details for this patient. You can add more medicines later.</p><input type="hidden" name="patientIndex"><div class="form-grid"><label>Medicine name<input name="name" placeholder="e.g. Losartan" required></label><label>Strength / dosage<input name="dosage" placeholder="e.g. 50 mg" required></label></div><div class="form-grid"><label>Quantity per dose<input name="quantity" type="number" min="1" value="1" required></label><label>Times per day<select name="frequency"><option value="1">Once daily</option><option value="2">Twice daily</option><option value="3">Three times daily</option><option value="4">Four times daily</option></select></label></div><div class="form-grid"><label>Usual time<input name="time" type="time" required></label><label>Current stock (tablets)<input name="stock" type="number" min="0" placeholder="e.g. 30"></label></div><label>Instructions <small>(optional)</small><textarea name="instructions" placeholder="e.g. Take after breakfast"></textarea></label><button class="auth-submit" type="submit">Save medication <span>→</span></button></form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
